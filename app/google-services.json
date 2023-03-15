@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "432649796129",
+    "project_id": "dulciamante-e1362",
+    "storage_bucket": "dulciamante-e1362.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:432649796129:android:2c8ef17b701be0457a4160",
+        "android_client_info": {
+          "package_name": "com.example.dulci1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "432649796129-0qt5s4df79p788tc3k2egjt1k6k43ncr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArptdd4wT7UI_sFfDlGkxPnT_r8J2CZWk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "432649796129-0qt5s4df79p788tc3k2egjt1k6k43ncr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
