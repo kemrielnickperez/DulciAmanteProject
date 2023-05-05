@@ -48,8 +48,8 @@ public class CheckOut extends AppCompatActivity {
         tvGender.setText(sp.getString("Gender", "N/A"));
         tvAddress.setText(sp.getString("Street Number", "N/A") + ", " + sp.getString("City", "N/A") + ", " + sp.getString("Postal Code", "N/A"));
         tvOrder.setText(sp.getString("Your Coffee", " "));
-        tvOrder1.setText("Size: " + sp.getString("Size", ""));
-        tvOrder2.setText("Sugar Level: " + sp.getString("Sugar Level", ""));
+        tvOrder1.setText("" + sp.getString("Size", ""));
+        tvOrder2.setText("" + sp.getString("Sugar Level", ""));
         tvOrder3.setText("" + sp.getString("Item", ""));
         tvTotal.setText(sp.getString("Price", ""));
         dbCustomer db = new dbCustomer();

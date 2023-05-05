@@ -32,7 +32,7 @@ public class ReviewPage extends AppCompatActivity {
     double priceNum1;
     DatabaseReference reference;
     String cs_firstName, cs_lastName, cs_contactNumber, cs_EmailAddress, cs_Address, cs_Order, cs_Size, cs_Item, cs_Price, cs_Gender, cs_SugarLevel;
-
+    double orig1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +55,7 @@ public class ReviewPage extends AppCompatActivity {
         etItem1 = findViewById(R.id.etItem1);
         tvCoffeeSelect1 = findViewById(R.id.TvCoffeeSelect);
         tvPrice1 = findViewById(R.id.tvPrice1);
-        btnUpdate0 = findViewById(R.id.btnUpdate0);
+        //btnUpdate0 = findViewById(R.id.btnUpdate0);
         etSize1 = findViewById(R.id.et_Size1);
         etSugarLevel1 = findViewById(R.id.et_SugarLevel1);
         btnOk = findViewById(R.id.btnOk);
@@ -66,14 +66,14 @@ public class ReviewPage extends AppCompatActivity {
 
         reference = FirebaseDatabase.getInstance().getReference().child("Customer");
         showAllCustomerData();
-        btnUpdate0.setOnClickListener(new View.OnClickListener() {
+        /*btnUpdate0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 int item1 = Integer.parseInt(etItem1.getText().toString());
-                priceNum1 *= item1;
+                //priceNum1 *= item1;
                 tvPrice1.setText(String.valueOf(priceNum1));
             }
-        });
+        });*/
         dbCustomer db = new dbCustomer();
         btnCancel.setOnClickListener(v ->{
             db.remove("" + etFirstName1.getText().toString()).addOnSuccessListener(suc -> {
@@ -126,14 +126,54 @@ public class ReviewPage extends AppCompatActivity {
         tvPrice1.setText(cs_Price);
 
     }
+    public void onClickLarge1(View view){
+        etSize1.setText("Large");
+    }
+    public void onClickMedium1(View view){
+        etSize1.setText("Medium");
+    }
+    public void onClickSmall1(View view){
+        etSize1.setText("Small");
+    }
 
+    public void onClickPlus1(View view){
+        String currentValue=etItem1.getText().toString();
+        int itemNum=Integer.parseInt(currentValue);
+        priceNum1=priceNum1+orig1;
+        itemNum++;
+        etItem1.setText(String.valueOf(itemNum));
+        tvPrice1.setText(String.valueOf(priceNum1));
+    }
+
+    public void onClickMinus1(View view){
+        String currentValue=etItem1.getText().toString();
+        int itemNum=Integer.parseInt(currentValue);
+        itemNum--;
+        priceNum1=priceNum1-orig1;
+        if(itemNum<0){
+            itemNum=1;
+        }
+        etItem1.setText(String.valueOf(itemNum));
+        tvPrice1.setText(String.valueOf(priceNum1));
+    }
+    public void onClickSugfifty1(View view){
+
+        etSugarLevel1.setText("50%");
+    }
+    public void onClickSugSeventyfive1(View view){
+        etSugarLevel1.setText("75%");
+    }
+    public void onClickSugOnehundred1(View view){
+        etSugarLevel1.setText("100%");
+    }
 
     public void onClickHotLatte1(View view) {
         tvUrOrder1.setText("Hot Lattee");
         etSize1.setEnabled(true);
         etSugarLevel1.setEnabled(true);
-
+        orig1=200.0;
         priceNum1 = 200.00;
+        etItem1.setText("1");
         tvPrice1.setText("200.00");
     }
 
@@ -141,8 +181,9 @@ public class ReviewPage extends AppCompatActivity {
         tvUrOrder1.setText("Macchiato");
         etSize1.setEnabled(true);
         etSugarLevel1.setEnabled(true);
-
+        orig1=175.20;
         priceNum1 = 175.20;
+        etItem1.setText("1");
         tvPrice1.setText("175.20");
     }
 
@@ -150,25 +191,28 @@ public class ReviewPage extends AppCompatActivity {
         tvUrOrder1.setText("MilkTea");
         etSize1.setEnabled(true);
         etSugarLevel1.setEnabled(true);
-
+        orig1=185.99;
         priceNum1 = 185.99;
+        etItem1.setText("1");
         tvPrice1.setText("185.99");
     }
 
     public void onClickEspresso1(View view) {
         tvUrOrder1.setText("Espresso");
         etSize1.setEnabled(true);
-        ;
+        orig1=200.50;
         priceNum1 = 200.50;
+        etItem1.setText("1");
         tvPrice1.setText("200.50");
     }
 
     public void onClickCupCake1(View view) {
         tvUrOrder1.setText("CupCake");
         etSize1.setEnabled(false);
+        etItem1.setText("1");
         etSugarLevel1.setEnabled(false);
 
-
+        orig1=215.25;
         priceNum1 = 215.25;
         tvPrice1.setText("215.25");
     }
@@ -177,7 +221,8 @@ public class ReviewPage extends AppCompatActivity {
         tvUrOrder1.setText("Cake");
         etSize1.setEnabled(false);
         etSugarLevel1.setEnabled(false);
-
+        etItem1.setText("1");
+        orig1=450.50;
         priceNum1 = 450.50;
         tvPrice1.setText("450.50");
     }
@@ -186,7 +231,8 @@ public class ReviewPage extends AppCompatActivity {
         tvUrOrder1.setText("Ice Cream");
         etSize1.setEnabled(false);
         etSugarLevel1.setEnabled(false);
-
+        etItem1.setText("1");
+        orig1=350.00;
         priceNum1 = 350.00;
         tvPrice1.setText("350.00");
     }
@@ -195,7 +241,8 @@ public class ReviewPage extends AppCompatActivity {
         tvUrOrder1.setText("Turkish Delight");
         etSize1.setEnabled(false);
         etSugarLevel1.setEnabled(false);
-
+        etItem1.setText("1");
+        orig1=100.00;
         priceNum1 = 100.00;
         tvPrice1.setText("100.00");
     }
@@ -423,7 +470,7 @@ public class ReviewPage extends AppCompatActivity {
         }
 */
     public void onClickOk(View view) {
-        Intent i= new Intent(ReviewPage.this,Login.class);
+        Intent i= new Intent(ReviewPage.this,Details.class);
         startActivity(i);
     }
 }
