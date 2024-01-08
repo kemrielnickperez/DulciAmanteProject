@@ -1,4 +1,4 @@
-**About Dulci Amante Ordering System **
+**About Dulci Amante Ordering System**
 
 DulceAmante is a user-friendly ordering system that lets customers select and purchase their favorite sweet treats and gourmet coffees online. Our app simplifies the ordering process and ensures that every product is securely saved to our database, so customers can place their orders with confidence. Our speedy and reliable delivery service ensures that customers receive their orders in a timely manner, without having to wait in long lines. And for added convenience, customers can easily reorder their favorite items with just a few clicks, knowing that they'll be delivered straight to their doorstep. Experience the convenience and deliciousness of DulceAmante today!
 
@@ -6,6 +6,7 @@ DulceAmante is a user-friendly ordering system that lets customers select and pu
        - Android studio: IDE for android application development 
        - Java programming: programming language used
        - Firebase: database for the storage of data
+
 
 **"How to Use the App: A Step-by-Step Guide"**
     Step 1: Before proceeding with your order, please complete the registration process and provide the required information.
