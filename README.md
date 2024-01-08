@@ -10,11 +10,7 @@ DulceAmante is a user-friendly ordering system that lets customers select and pu
 
 **"How to Use the App: A Step-by-Step Guide"**
 
-
-
     Step 1: Before proceeding with your order, please complete the registration process and provide the required information.
-    
-    
     Step 2: Once completed, you will be directed to the Dulci Amante menu screen, showcasing our selection of delectable sweets and gourmet coffees, available for immediate ordering.
     Step 3: Once you've chosen your preferred gourmet coffee, you have the option to customize it further by selecting its size, sugar level, and quantity. Once you've made your selections, simply click on the "check out" button to complete your order.
     Step 4: After selecting your items, you'll be taken to a checkout review page where you can confirm your order and review all of your information. Once you're satisfied with everything, simply click the "order now" button to securely save your order in Dolce Amante's database.
