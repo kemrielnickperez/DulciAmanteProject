@@ -26,8 +26,8 @@ DulceAmante is a user-friendly ordering system that lets customers select and pu
             simply click the "order now" button to securely save your order in Dolce Amante's database.
     
     Step 5: Your order has been securely saved in our Firebase database and is now being processed for delivery. 
-            We're excited to fulfill your order and can't wait for you to receive it. Thank you for choosing us for your order, 
-            and we hope to serve you again soon.
+            We're excited to fulfill your order and can't wait for you to receive it. 
+            Thank you for choosing us for your order, and we hope to serve you again soon.
     
-    Step 6: If you need to make changes to your order, you can easily review it before submitting.
-            Any modifications you make will automatically update the order details in the database.
+    If you need to make changes to your order, you can easily review it before submitting.
+    Any modifications you make will automatically update the order details in the database.
